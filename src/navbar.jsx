@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import RightArrow from './rightArrow'
+import { Link } from 'react-router-dom'
 
 const navbar = () => {
 
@@ -24,7 +26,8 @@ const navbar = () => {
     return (
         <>
             <div id="navbar" className=' fixed w-full top-0 bg-neutral-900  py-3 px-3 z-10 '>
-                <div className='relative w-full'>
+                <div className='relative w-full flex justify-start items-center'>
+
                     <div className=" cursor-pointer" style={{ height: "30px" }}>
                         <svg className='bar h-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
                         </svg>
@@ -32,18 +35,21 @@ const navbar = () => {
                         </svg>
                     </div>
 
+                    <div id="name" className=' mx-4 text-2xl text-white font-[600]'>Diaries</div>
+
                     <div id="sideNavbar" className=' transition-all duration-500 bg-neutral-900 w-2/12 mt-4 absolute top-full -left-full'>
-                        <ul className=' relative w-full text-white text-lg font-[600] flex flex-col justify-evenly' style={{ height: `${window.innerHeight *0.9}px` }}>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >buness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >busiddness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >busfbgfhiness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >bushghiness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >business</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >busingnhgess</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >business</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >buffsiness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >busfbvfiness</li>
-                            <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105' >busvvfiness</li>
+                        <ul className=' relative w-full text-white text-lg font-[600] flex flex-col justify-evenly' style={{ height: `${window.innerHeight - 80}px` }}>
+                           <Link to="/billionaires"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Billionaires<RightArrow/> </li></Link>
+                           <Link to="/institutions"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Institutions<RightArrow/> </li></Link>
+                           <Link to="/technology"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Technology<RightArrow/> </li></Link>
+                           <Link to="/celebrity"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Celebrity<RightArrow/> </li></Link>
+                           <Link to="/lists"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Lists<RightArrow/> </li></Link>
+                           <Link to="/startups"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Startups<RightArrow/> </li></Link>
+                           <Link to="/top10"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Top 10<RightArrow/> </li></Link>
+                           <Link to="/realestate"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Real estate<RightArrow/> </li></Link>
+                           <Link to="/sports"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Sports<RightArrow/> </li></Link>
+                           <Link to="/blogwritting"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Blog writting<RightArrow/> </li></Link>
+                           <Link to="/contact"> <li className=' w-full px-4 transition-all cursor-pointer hover:scale-105 flex justify-between items-center' >Contact us<RightArrow/> </li></Link>
                         </ul>
                     </div>
                 </div>

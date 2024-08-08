@@ -141,12 +141,9 @@ const home = () => {
 
     }
 
-
-
     useEffect(() => {
         // fetch()
     }, [])
-
 
     useEffect(() => {
         topHeadLines ? (() => {
@@ -183,7 +180,7 @@ const home = () => {
             <Navbar />
             <div id="part1">
                 <div className="topBg bg-neutral-900 flex justify-center items-end" style={{ height: `${window.innerHeight * 0.35}px` }}>
-                    {/* <div className="heding text-4xl font-[800] text-white mb-10">Headlines</div> */}
+                    
                 </div>
 
                 <div className="topHeadLine">
@@ -232,7 +229,7 @@ const home = () => {
             <div id='horiZontalSlide' className="horiZontalSlide w-full flex justify-center my-10">
                 <div className=' w-11/12 p-3 overflow-auto h-80 bg-stone-200'>
                 <div className=' h-full flex justify-between p-2'>
-                    {[1,2,3,4,5].map((_ , i)=>{
+                    {[1,2,3,4,5,6,7,8].map((_ , i)=>{
                         return <div className=' relative min-w-52 mx-2 bg-stone-100  pb-10'>
                         <div className="img w-full h-3/5 p-1">
                             <img className=' w-full h-full object-cover' src={topHeadLines[i].image} />

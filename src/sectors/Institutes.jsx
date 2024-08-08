@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../navbar'
 
-const Billionaires = () => {
+const Institutes = () => {
 
     const otherNews = useRef()
 
@@ -205,4 +205,4 @@ const Billionaires = () => {
     )
 }
 
-export default Billionaires
+export default Institutes
