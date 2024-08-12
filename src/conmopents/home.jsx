@@ -179,21 +179,17 @@ const home = () => {
         topHeadLines && <>
             <Navbar />
             <div id="part1">
-                <div className="topBg bg-neutral-900 flex justify-center items-end" style={{ height: `${window.innerHeight * 0.35}px` }}>
-                    
-                </div>
-
                 <div className="topHeadLine">
-                    <div className="1stHeadLineImg -mt-20 mx-auto mb-4 w-5/12">
-                    <div className="heding text-4xl text-center mb-3 font-[800] text-white">Headlines</div>
+                    <div className="1stHeadLineImg mx-auto mt-3 mb-4 md:w-5/12 sm:w-8/12 w-11/12 ">
+                    <div className="heding text-4xl text-center mb-3 font-[800] text-gray-800 ">“Learn as if you will live forever, live like you will die tomorrow.”</div>
                         <img className=' w-full' src={topHeadLines[0].image} />
                         <div className=' text-end text-sm italic'>{topHeadLines[0].source.name}<Link className=' ms-4' to={topHeadLines[0].source.url}>{topHeadLines[0].source.url}</Link> </div>
                         <div className='text-end text-sm italic '>{Math.round((Date.now() - new Date(topHeadLines[0].publishedAt)) / (60 * 60 * 1000))} hours ago</div>
                     </div>
-                    <div className="headline text-3xl text-center font-[500] mx-auto font-serif text-black w-7/12 ">{topHeadLines[0].title}</div>
+                    <div className="headline text-3xl text-center font-[500] mx-auto font-serif text-black md:w-7/12 sm:w-9/12 w-11/12 ">{topHeadLines[0].title}</div>
                 </div>
 
-                <div className=" py-4 px-4 w-8/12 mx-auto content font-serif mb-6 text-center border-b-2 border-gray-500">
+                <div className=" py-4 px-4 md:w-8/12 sm:w-9/12 w-11/12 mx-auto content font-serif mb-6 text-center border-b-2 border-gray-500">
                     <div> {topHeadLines[0].description}</div>
                     <div className="readmoreBtn my-6 mb-3">
                         <Link to={topHeadLines[0].url}> <button className='btn bg-red-600 rounded-md hover:bg-red-700 text-lg text-white'>
@@ -203,17 +199,17 @@ const home = () => {
                     </div>
                 </div>
 
-                <div ref={otherNews} className="otherHeadLines p-4 flex flex-wrap justify-center items-center mx-auto w-full">
+                <div ref={otherNews} className="otherHeadLines py-4 px-2 flex flex-wrap justify-center items-center mx-auto w-full">
                     {topHeadLines.map((_, i) => {
                         if (i !== 0) {
-                            return <div key={topHeadLines[i].publishedAt} className=' p-3 m-3 bg-gray-200 w-3/12 otherNews'>
+                            return <div key={topHeadLines[i].publishedAt} className=' m-3 bg-gray-200 md:w-3/12 sm:w-5/12 w-11/12 otherNews'>
                                 <div className="img ">
                                     <img className=' w-full max-h-40 object-cover' src={topHeadLines[i].image} />
                                 </div>
                                 <div className="text-end italic text-sm  my-2"><Link className=' text-red-700 font-[600]' to={topHeadLines[0].source.url}>{topHeadLines[0].source.url}</Link></div>
                                 <div className="headline text-base font-[600] font-serif pb-3">{topHeadLines[i].title}</div>
-                                <div className="content text-sm ">{topHeadLines[i].description}</div>
-                                <div className="readmoreBtn my-6 mb-3">
+                                <div className="content text-sm sm:block hidden">{topHeadLines[i].description}</div>
+                                <div className="readmoreBtn my-6 mb-3 sm:block hidden">
                                     <Link to={topHeadLines[i].url}> <button className='btn bg-red-600 rounded-md hover:bg-red-700 text-base text-white'>
                                         Read More
                                     </button>

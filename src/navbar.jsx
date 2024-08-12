@@ -25,7 +25,7 @@ const navbar = () => {
 
     return (
         <>
-            <div id="navbar" className=' fixed w-full top-0 bg-neutral-900  py-3 px-3 z-10 '>
+            <div id="navbar" className=' w-full bg-neutral-900  py-3 px-3 z-10 '>
                 <div className='relative w-full flex justify-start items-center'>
 
                     <div className=" cursor-pointer" style={{ height: "30px" }}>
